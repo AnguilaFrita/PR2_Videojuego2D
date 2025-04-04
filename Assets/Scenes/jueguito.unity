@@ -410,6 +410,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 171008708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &557273261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 536648952940819298, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793931630676443625, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113294494267665514, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_Name
+      value: enemigo_fantasma
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230549152398886885, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a4003dacfffd4b4c8a98103a1728e5f, type: 3}
 --- !u!1 &1194905526
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,15 +742,39 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: 7.0684684e+28
+      e01: 0
+      e02: -1.7618306e-19
+      e03: -1.7618306e-19
+      e10: 2.7900757e+20
+      e11: 0
+      e12: 9.33e-43
+      e13: 9.33e-43
+      e20: -4.524739e-14
+      e21: 3.848047e-12
+      e22: 8.821573e-29
+      e23: -3.7068214e+19
+      e30: 4.5905e-41
+      e31: 9.37e-43
+      e32: 9.35e-43
+      e33: 9.36e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 3.9357e-41, g: 3.9357e-41, b: 3.9357e-41, a: 3.9357e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
+  m_Origin: {x: -2, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -2948,3 +3037,4 @@ SceneRoots:
   - {fileID: 1194905528}
   - {fileID: 4053216440761389191}
   - {fileID: 1352419120}
+  - {fileID: 557273261}

@@ -32,10 +32,16 @@ public class MovPersonaje : MonoBehaviour
         }*/
 
         
-    
-        
 
         float miDeltaTime = Time.deltaTime;
+
+        Debug.Log(Time.deltaTime);
+
+        transform.Translate(
+            MovTeclas*(Time.deltaTime*velocidad),
+            0,
+            0
+        );
 
         //Debug.Log(Input.GetAxis("Horizontal"));
 
