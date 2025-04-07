@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 4
+  multiplicadorSalto: 8
 --- !u!1 &328721141
 GameObject:
   m_ObjectHideFlags: 0
