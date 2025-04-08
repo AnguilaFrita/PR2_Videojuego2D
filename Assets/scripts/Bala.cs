@@ -29,7 +29,7 @@ public class Bala : MonoBehaviour
     {
         if (col.gameObject.name.StartsWith("enemigo_fantasma")){
             Destroy(this.gameObject);
-            col.gameObject.GetComponent<Fantasma>().VidaFantasma -= potenciaArma;
+            col.gameObject.GetComponent<Fantasma>().vidaFantasma -= potenciaArma;
         }
 
     }
