@@ -13,7 +13,7 @@ public class Fantasma : MonoBehaviour
     private Vector3 poseLimIzda;
     private bool direccionFantasma = true;
     private Vector3 poseInicial;
-    private bool estadoFantasma = "Patrol";
+    private string estadoFantasma = "Patrol";
     
    
     private GameObject player;
