@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class cambiaEstado : MonoBehaviour
+{}
 /****************************************************************************** no entiendo nara
 {
 
@@ -33,3 +34,4 @@ public class cambiaEstado : MonoBehaviour
         
     }
 }
+*/
