@@ -11,10 +11,14 @@ public class MovPersonaje : MonoBehaviour
 
     private bool puedoSaltar = true;
 
+    private Animator animatorController;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D> ();
+
+        animatorController = this.GetComponent<Animator>();
         
     }
 
@@ -63,15 +67,22 @@ public class MovPersonaje : MonoBehaviour
 
         //salto
 
-      if(Input.GetKeyDown(KeyCode.Space) && puedoSaltar)
-    {
-         rb.AddForce(new Vector2
-         (0,multiplicadorSalto),
-         ForceMode2D.Impulse
-         );
-        // puedoSaltar = false;
-    }
-        //Debug.Log(Input.GetAxis("Horizontal"));
+        if(Input.GetKeyDown(KeyCode.Space) && puedoSaltar)
+        {
+            rb.AddForce(new Vector2
+            (0,multiplicadorSalto),
+            ForceMode2D.Impulse
+            );
+            // puedoSaltar = false;
+        }
+            //Debug.Log(Input.GetAxis("Horizontal"));
+
+            
+            if(MovTeclas == 0){
+                animatorController.SetBool("ActivaCamina", false);
+            }else{
+                animatorController.SetBool("ActivaCamina", true);
+            }
 
     }
 
