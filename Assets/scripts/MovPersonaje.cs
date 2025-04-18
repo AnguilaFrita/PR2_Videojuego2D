@@ -13,18 +13,30 @@ public class MovPersonaje : MonoBehaviour
 
     private Animator animatorController;
 
+    GameObject Respawn;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D> ();
 
         animatorController = this.GetComponent<Animator>();
+
+        Respawn = GameObject.Find("respawn");
+
+        transform.position = Respawn.transform.position;
+
+    
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(GameManager.Mortaja) return;
+
 
         //movimiento
 
@@ -47,7 +59,7 @@ public class MovPersonaje : MonoBehaviour
 
         float miDeltaTime = Time.deltaTime;
 
-        Debug.Log(Time.deltaTime);
+        //Debug.Log(Time.deltaTime);
 
         transform.Translate(
             MovTeclas*(Time.deltaTime*velocidad),
@@ -60,7 +72,7 @@ public class MovPersonaje : MonoBehaviour
 
         if(hit){
             puedoSaltar = true;
-            Debug.Log(hit.collider.name);
+            
         }else{
             puedoSaltar = false;
         }
@@ -75,7 +87,7 @@ public class MovPersonaje : MonoBehaviour
             );
             // puedoSaltar = false;
         }
-            //Debug.Log(Input.GetAxis("Horizontal"));
+            
 
             
             if(MovTeclas == 0){
@@ -84,10 +96,36 @@ public class MovPersonaje : MonoBehaviour
                 animatorController.SetBool("ActivaCamina", true);
             }
 
+
+
+        if(transform.position.y <= -10){
+            respawnear();
+        }
+
+
+        //0 vidas
+        if(GameManager.vidas <= 0){
+            GameManager.Mortaja = true;
+        }
+    
+
     }
 
     void OnCollisionEnter2D(){
        puedoSaltar = true;
 
     }
+
+
+    public void respawnear(){
+
+        Debug.Log("vidas: "+GameManager.vidas);
+        GameManager.vidas = GameManager.vidas -1;
+        Debug.Log("vidas: "+GameManager.vidas);
+
+        transform.position = Respawn.transform.position;
+    }
+
+    
+    
 }

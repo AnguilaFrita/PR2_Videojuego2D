@@ -44,4 +44,8 @@ public class Inicio : MonoBehaviour
         Application.Quit();
     }
 
+     public void OcultarSettings(){
+        panelSettings.SetActive(false);
+    }
+
 }

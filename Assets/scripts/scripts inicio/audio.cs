@@ -8,6 +8,11 @@ public class audio : MonoBehaviour
     public AudioSource m_audioSource;
     public AudioClip bandaSonora;
     public AudioClip sonidoMonea;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(bandaSonora);
+    }
     // Start is called before the first frame update
     void Start()
     {
