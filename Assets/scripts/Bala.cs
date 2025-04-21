@@ -1,26 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
 
-    public float velocidad = 1;
+    public float velocidad = 1f;
 
     public int potenciaArma = 1;
+
+    GameObject personaje;
+
+    bool balaDerecha = true;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        personaje = GameObject.Find("knight");
+        balaDerecha = personaje.GetComponent<MovPersonaje>().miraDerecha;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        float VelocidadFinal = velocidad * Time.deltaTime;
+        float VelocidadFinal = velocidad *Time.deltaTime;
          transform.Translate(VelocidadFinal,0,0);
 
-    
+        if (balaDerecha){
+            transform.Translate(VelocidadFinal, 0, 0, Space.World);
+        }else{
+            transform.Translate(VelocidadFinal *-1, 0, 0, Space.World);
+        }
         
     }
 

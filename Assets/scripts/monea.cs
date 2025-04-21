@@ -8,6 +8,7 @@ public class monea : MonoBehaviour
 
     public int valor = 1;
 
+
     GameObject AudioManager;
     
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class monea : MonoBehaviour
   
             Destroy(this.gameObject,1.0f);
            
+           GameManager.puntos += 1;
         }
 
 

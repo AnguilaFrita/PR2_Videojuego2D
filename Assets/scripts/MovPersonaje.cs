@@ -13,6 +13,8 @@ public class MovPersonaje : MonoBehaviour
 
     private Animator animatorController;
 
+    public bool miraDerecha = true;
+
     GameObject Respawn;
 
     
@@ -43,10 +45,12 @@ public class MovPersonaje : MonoBehaviour
         float MovTeclas = Input.GetAxis("Horizontal");
 
         if(MovTeclas>0){
+            miraDerecha = true;
             this.GetComponent<SpriteRenderer>().flipX = false;
            // this.GetComponent<Animator>().SetBool("activaCaminar", true);
         }
         if(MovTeclas<0){
+            miraDerecha = false;
             this.GetComponent<SpriteRenderer>().flipX = true;
            // this.GetComponent<Animator>().SetBool("activaCaminar", true);
         }

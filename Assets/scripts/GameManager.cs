@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static bool Mortaja = false;
 
+    public static int puntos = 1;
+
     public static int vidas = 3;
     // Start is called before the first frame update
     void Start()
