@@ -15,7 +15,6 @@ public class Fantasma : MonoBehaviour
     private Vector3 poseInicial;
     private string estadoFantasma = "Patrol";
     
-   
     private GameObject player;
 
     private float distancia;
@@ -38,6 +37,7 @@ public class Fantasma : MonoBehaviour
     // Update is called once per frame
     void Update()
   {
+    
       if(vidaFantasma <= 0){
             Destroy(this.gameObject);
           }  
@@ -49,7 +49,7 @@ public class Fantasma : MonoBehaviour
             this.GetComponent<SpriteRenderer>().flipX = true;
           }
           if(direccionFantasma == false){
-            transform.Translate((velocidad*Time.deltaTime)*-1, 0, 0);
+            transform.Translate(velocidad*Time.deltaTime*-1, 0, 0);
             this.GetComponent<SpriteRenderer>().flipX = false;
           }
 
@@ -71,7 +71,7 @@ public class Fantasma : MonoBehaviour
 
 
 
-    Debug.Log(distancia);
+    //Debug.Log(distancia);
  
 
     if(estadoFantasma == "Ataque"){
@@ -85,9 +85,9 @@ public class Fantasma : MonoBehaviour
 
 //lo de abajo es porque me falta el Game Manager script
 
-/* void OnCollisionEnter2D(Collision2D col){
+ /*void OnCollisionEnter2D(Collision2D col){
     if(col.gameObject.tag == "Player"){
-        GameManager.vida -= 1;
+        GameManager.vidas -= 1;
       }
 */   
     }

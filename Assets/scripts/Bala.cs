@@ -14,12 +14,16 @@ public class Bala : MonoBehaviour
 
     bool balaDerecha = true;
 
+    float tiempoDestruccion = 5f;
+
+    float quehoraes;
+
     // Start is called before the first frame update
     void Start()
     {
         personaje = GameObject.Find("knight");
         balaDerecha = personaje.GetComponent<MovPersonaje>().miraDerecha;
-
+        quehoraes = Time.time;
     }
 
     // Update is called once per frame
@@ -34,6 +38,9 @@ public class Bala : MonoBehaviour
             transform.Translate(VelocidadFinal *-1, 0, 0, Space.World);
         }
         
+        if(Time.time >= quehoraes+tiempoDestruccion){
+            Destroy(this.gameObject);
+        }
     }
 
 
@@ -42,6 +49,9 @@ public class Bala : MonoBehaviour
         if (col.gameObject.name.StartsWith("enemigo_fantasma")){
             Destroy(this.gameObject);
             col.gameObject.GetComponent<Fantasma>().vidaFantasma -= potenciaArma;
+        }
+        if(gameObject.GetComponent<Fantasma>().vidaFantasma == 0){
+            GameManager.muertes +=1;
         }
 
     }

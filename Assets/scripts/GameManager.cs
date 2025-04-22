@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static int puntos = 1;
 
     public static int vidas = 3;
+
+    public static int muertes = 0;
     // Start is called before the first frame update
     void Start()
     {
