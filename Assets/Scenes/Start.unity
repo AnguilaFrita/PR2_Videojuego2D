@@ -247,10 +247,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Las aventuras de Obamna
+  m_text: LAS AVENTURAS DE OBAMNA
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f39c1bd6c5a25d47b76d05e1c32fa46, type: 2}
+  m_sharedMaterial: {fileID: -2435962008852145709, guid: 5f39c1bd6c5a25d47b76d05e1c32fa46, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -274,8 +274,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 211455936}
   - component: {fileID: 211455935}
   - component: {fileID: 211455934}
+  - component: {fileID: 211455938}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -427,6 +428,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &211455938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211455933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37488fe54c1774391cafad0155bde0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &422543509
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,10 +497,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: SETTINGS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f39c1bd6c5a25d47b76d05e1c32fa46, type: 2}
+  m_sharedMaterial: {fileID: -2435962008852145709, guid: 5f39c1bd6c5a25d47b76d05e1c32fa46, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -511,8 +524,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -650,6 +663,7 @@ GameObject:
   - component: {fileID: 1180911739}
   - component: {fileID: 1180911738}
   - component: {fileID: 1180911737}
+  - component: {fileID: 1180911740}
   m_Layer: 5
   m_Name: ButtonExit2
   m_TagString: Untagged
@@ -666,14 +680,14 @@ RectTransform:
   m_GameObject: {fileID: 1180911735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 482037324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 240, y: 120}
   m_SizeDelta: {x: 704, y: 189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180911737
@@ -719,7 +733,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1180911738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 211455938}
+        m_TargetAssemblyTypeName: Inicio, Assembly-CSharp
+        m_MethodName: OcultarSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1180911738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,6 +784,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180911735}
   m_CullTransparentMesh: 1
+--- !u!114 &1180911740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180911735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 211455938}
+          m_TargetAssemblyTypeName: Inicio, Assembly-CSharp
+          m_MethodName: SuenaBoton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1491798514
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +825,7 @@ GameObject:
   - component: {fileID: 1491798518}
   - component: {fileID: 1491798517}
   - component: {fileID: 1491798516}
+  - component: {fileID: 1491798519}
   m_Layer: 5
   m_Name: ButtonSettings
   m_TagString: Untagged
@@ -890,6 +946,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491798514}
   m_CullTransparentMesh: 1
+--- !u!114 &1491798519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491798514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 211455938}
+          m_TargetAssemblyTypeName: Inicio, Assembly-CSharp
+          m_MethodName: SuenaBoton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1532365654
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +1031,7 @@ GameObject:
   - component: {fileID: 1692442926}
   - component: {fileID: 1692442925}
   - component: {fileID: 1692442924}
+  - component: {fileID: 1692442927}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1066,6 +1152,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692442922}
   m_CullTransparentMesh: 1
+--- !u!114 &1692442927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692442922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 211455938}
+          m_TargetAssemblyTypeName: Inicio, Assembly-CSharp
+          m_MethodName: SuenaBoton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1707364822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1285,7 @@ GameObject:
   - component: {fileID: 1927140233}
   - component: {fileID: 1927140232}
   - component: {fileID: 1927140231}
+  - component: {fileID: 1927140234}
   m_Layer: 5
   m_Name: ButtonExit
   m_TagString: Untagged
@@ -1290,6 +1406,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927140229}
   m_CullTransparentMesh: 1
+--- !u!114 &1927140234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927140229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 211455938}
+          m_TargetAssemblyTypeName: Inicio, Assembly-CSharp
+          m_MethodName: SuenaBoton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1976870984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1522,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77229685923515415, guid: f28303d6891bbfe4b8913d5ebe0a65f4, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4135334935853892965, guid: f28303d6891bbfe4b8913d5ebe0a65f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01370912
@@ -1421,6 +1570,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6261742877858887777, guid: f28303d6891bbfe4b8913d5ebe0a65f4, type: 3}
+      propertyPath: sonidoBala
+      value: 
+      objectReference: {fileID: 8300000, guid: 22a1e7cafb5851d42b4ab8ea13a8d0c8, type: 3}
+    - target: {fileID: 6261742877858887777, guid: f28303d6891bbfe4b8913d5ebe0a65f4, type: 3}
+      propertyPath: sonidoPupa
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e186f2182bf02442bdc3fa72c2807bd, type: 3}
+    - target: {fileID: 6261742877858887777, guid: f28303d6891bbfe4b8913d5ebe0a65f4, type: 3}
+      propertyPath: sonidoBotones
+      value: 
+      objectReference: {fileID: 8300000, guid: 192d4eb8ad52b5f468228704c27f2555, type: 3}
+    - target: {fileID: 6261742877858887777, guid: f28303d6891bbfe4b8913d5ebe0a65f4, type: 3}
+      propertyPath: sonidoMortaja
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e186f2182bf02442bdc3fa72c2807bd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -68,6 +68,7 @@ public class Fantasma : MonoBehaviour
       }
     if(distancia >= distanciaAtaque){
         estadoFantasma = "Patrol";
+      }
 
 
 
@@ -76,6 +77,7 @@ public class Fantasma : MonoBehaviour
 
     if(estadoFantasma == "Ataque"){
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, velocidadAtaque*Time.deltaTime);
+
         if(player.transform.position.x <= transform.position.x){
           this.GetComponent<SpriteRenderer>().flipX = false;
         }else{
@@ -83,14 +85,13 @@ public class Fantasma : MonoBehaviour
         }
       }
 
-//lo de abajo es porque me falta el Game Manager script
+    //Game Manager script
 
- /*void OnCollisionEnter2D(Collision2D col){
-    if(col.gameObject.tag == "Player"){
-        GameManager.vidas -= 1;
-      }
-*/   
-    }
-
+    void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.tag == "Player"){
+            GameManager.vidas -= 1;}
+      
+        }
   }
+    
 }

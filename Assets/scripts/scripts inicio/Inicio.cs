@@ -8,7 +8,7 @@ public class Inicio : MonoBehaviour
     GameObject panelSettings;
     
     GameObject AudioManager;
-    audio miAudioManager;
+    Audio miAudioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class Inicio : MonoBehaviour
         panelSettings.SetActive(false);
 
         AudioManager = GameObject.Find("AudioManager");
-        miAudioManager = AudioManager.GetComponent<audio> ();
+        miAudioManager = AudioManager.GetComponent<Audio> ();
         panelSettings.SetActive(true);
         miAudioManager.m_audioSource.PlayOneShot(miAudioManager.sonidoMonea);
         
@@ -30,7 +30,7 @@ public class Inicio : MonoBehaviour
     }
 
     public void SuenaBoton(){
-        
+        Audio.Instance.SonarClip(Audio.Instance.sonidoBotones);
     }
     public void InicioStart(){
         SceneManager.LoadScene("jueguito");
