@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Fantasma : MonoBehaviour
@@ -21,6 +22,9 @@ public class Fantasma : MonoBehaviour
     public float distanciaAtaque = 2;
     public float distanciaPatrol = 10;
     public float velocidadAtaque = 2;
+    private MovPersonaje movPersonaje;
+
+    AudioSource m_audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +35,7 @@ public class Fantasma : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
 
-        
+       m_audioSource = this.GetComponent<AudioSource>(); 
     }
 
     // Update is called once per frame
@@ -42,8 +46,8 @@ public class Fantasma : MonoBehaviour
             Destroy(this.gameObject);
           }  
 
-      if(estadoFantasma == "Patrol")
-        {
+      if(estadoFantasma == "Patrol"){
+
           if(direccionFantasma == true){
             transform.Translate(velocidad*Time.deltaTime, 0, 0);
             this.GetComponent<SpriteRenderer>().flipX = true;
@@ -65,8 +69,7 @@ public class Fantasma : MonoBehaviour
 
     if(distancia < distanciaAtaque){
         estadoFantasma = "Ataque";
-      }
-    if(distancia >= distanciaAtaque){
+      }else{
         estadoFantasma = "Patrol";
       }
 
@@ -77,21 +80,32 @@ public class Fantasma : MonoBehaviour
 
     if(estadoFantasma == "Ataque"){
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, velocidadAtaque*Time.deltaTime);
+        
+        if(m_audioSource.isPlaying == false){
+            m_audioSource.Play();
+        }
 
         if(player.transform.position.x <= transform.position.x){
           this.GetComponent<SpriteRenderer>().flipX = false;
         }else{
           this.GetComponent<SpriteRenderer>().flipX = true;
         }
+    //  }else{transform.position = Vector3.MoveTowards(transform.position, poseInicial,velocidad*Time.deltaTime);
       }
 
-    //Game Manager script
 
+  }
+
+    //Game Manager script
     void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag == "Player"){
             GameManager.vidas -= 1;}
-      
-        }
-  }
+            Audio.Instance.SonarClip(Audio.Instance.sonidoPupa);
+
+/*        if(GameManager.vidas <= 0){
+          movPersonaje.respawnear();}
+ */       
+    }
+        
     
 }

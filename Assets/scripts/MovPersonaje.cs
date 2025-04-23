@@ -94,11 +94,11 @@ public class MovPersonaje : MonoBehaviour
             
 
             
-            if(MovTeclas == 0){
-                animatorController.SetBool("ActivaCamina", false);
-            }else{
-                animatorController.SetBool("ActivaCamina", true);
-            }
+        if(MovTeclas == 0){
+            animatorController.SetBool("ActivaCamina", false);
+        }else{
+            animatorController.SetBool("ActivaCamina", true);
+        }
 
 
 

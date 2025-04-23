@@ -13,17 +13,24 @@ public class GameManager : MonoBehaviour
 
     public static int muertes = 0;
 
+    GameOverScript gameoverScreen;
+
     GameObject vidasText;
+    GameObject puntosText;
 
     // Start is called before the first frame update
     void Start()
     {
         vidasText = GameObject.Find("vidasText");
+
     }
 
     // Update is called once per frame
     void Update()
     {
         vidasText.GetComponent<TextMeshProUGUI>().text = vidas.ToString();
+
     }
+
+    
 }

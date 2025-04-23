@@ -33,7 +33,9 @@ public class monea : MonoBehaviour
   
             Destroy(this.gameObject,1.0f);
            
-           GameManager.puntos += 1;
+            GameManager.puntos += 1;
+
+            Audio.Instance.SonarClip(Audio.Instance.sonidoMonea);
         }
 
 
